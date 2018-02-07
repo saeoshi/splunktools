@@ -9,10 +9,6 @@ def cvelist_get():
         response = urllib2.urlopen('http://jvndb.jvn.jp/myjvn\?method\=getVulnOverviewList').read()
         print response
 
-#    except urllib2.HTTPError as e:
-#        print e.code
-#        print e.reason
-
     except urllib2.URLError as e:
         if hasattr(e, 'reason'):
             print 'We failed to reach a server.'
